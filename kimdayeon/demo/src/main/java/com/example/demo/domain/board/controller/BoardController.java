@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/board")
 @CrossOrigin(origins = "http://localhost:8080", allowedHeaders = "*")
+//spring Framework 주석
 public class BoardController {
 
     final private BoardService boardService;
