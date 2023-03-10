@@ -68,20 +68,4 @@ public class BoardServiceImpl implements BoardService {
 
         return board;
     }
-
-    @Override
-    public List<Board> bigMisstake(Long boardId, BoardRequest boardRequest) {
-        return boardRepository.findByBoardIdAndWriter(boardId, boardRequest.getWriter());
-    }
-
-    @Override
-    public Long getCount() {
-        return boardRepository.countBy();
-    }
-
-    @Override
-    public Long getLastEntityId() {
-        Board board = boardRepository.findFirstByOrderByBoardIdDesc();
-        return board.getBoardId();
-    }
 }
